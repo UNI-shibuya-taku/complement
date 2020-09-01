@@ -20,8 +20,8 @@ namespace complement
 		n.param<string>("topic_name/gyro", topic_gyro, "/imu/data");
 		n.param<string>("topic_name/odom_complement", topic_pub, "/odom/complement");
 
-		n.param<string>("frame_name/this", frame_this, "/odom");
-		n.param<string>("frame_name/child", frame_child, "/base_link");
+		n.param<string>("frame_name/this", frame_this, "odom");
+		n.param<string>("frame_name/child", frame_child, "base_link");
 
 		sub_wheel.subscribe(n, topic_wheel, 10);
 		sub_gyro.subscribe(n, topic_gyro, 150);
